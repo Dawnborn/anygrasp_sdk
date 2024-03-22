@@ -76,27 +76,3 @@ Please cite these papers in your publications if it helps your research:
       pages={15964--15973},
       year={2021}
     }
-
-# My Installation
-
-conda create -n anygrasp python=3.9
-
-source /data/hdd1/storage/junpeng/ws_anygrasp/prep_cuda.sh # cuda 10.2
-
-pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 # pytorch 版本不行
-
-------
-
-conda create -n anygrasp2 python=3.9
-
-source /data/hdd1/storage/junpeng/ws_anygrasp/prep_cuda.sh # cuda 11.1
-
-conda install pytorch=1.9.0 torchvision cudatoolkit=11.1 -c pytorch -c nvidia
-
-conda install openblas-devel -c anaconda
-
-conda install numpy
-
-git clone https://github.com/NVIDIA/MinkowskiEngine.git
-cd MinkowskiEngine
-python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openblas
